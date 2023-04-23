@@ -13,23 +13,23 @@ kpd = Keyboard(usb_hid.devices)
 
 # Choose the correct modifier key for Windows or Mac.
 # Comment one line and uncomment the other.
-# MODIFIER = Keycode.CONTROL  # For Windows
-MODIFIER = Keycode.COMMAND  # For Mac
+MODIFIER = Keycode.CONTROL  # For Windows
+# MODIFIER = Keycode.COMMAND  # For Mac
 
 # define buttons
 NUM_KEYS = 4
 PINS = (
-    board.GP0,
-    board.GP1,
-    board.GP2,
-    board.GP3,
+    board.GP9,
+    board.GP13,
+    board.GP18,
+    board.GP22,
 )
 
 KEYMAP = (
-    ("Select all", [MODIFIER, Keycode.A]),
-    ("Cut", [MODIFIER, Keycode.X]),
     ("Copy", [MODIFIER, Keycode.C]),
     ("Paste", [MODIFIER, Keycode.V]),
+    ("Delete", [Keycode.DELETE]),
+    ("Space", [Keycode.SPACE),
 )
 
 keys = []
