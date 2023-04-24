@@ -45,8 +45,11 @@ for k in range(NUM_KEYS):
 
 
 while True:
-    for i in range(NUM_KEYS):
-        keys[i].update()
-        if keys[i].fell:
-            print(KEYMAP[i][0])
-            kpd.send(*KEYMAP[i][1])
+    try:
+        for i in range(NUM_KEYS):
+            keys[i].update()
+            if keys[i].fell:
+                print(KEYMAP[i][0])
+                kpd.send(*KEYMAP[i][1])
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt")
